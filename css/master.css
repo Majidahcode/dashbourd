@@ -783,6 +783,220 @@ ul{
 
 }
 /* end setting */
+
+/* Start widget-control */
+
+.widget-control .control input[type="checkbox"]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.widget-control .control label{
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.widget-control .control label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    border-radius: 4px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--gray-color);
+    
+    
+}
+.widget-control .control label:hover::before{
+    border-color: var(--blue-alt-color);
+}
+.widget-control .control label::after{
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    border-radius: 4px;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) rotate(360deg) ;
+    transition: 0.3s;
+   
+
+
+    
+}
+.widget-control .control input[type="checkbox"]:checked + label::after{
+    transform: scale(1);
+    
+}
+
+.backup-control .date input[type="radio"]{
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+.backup-control .date label{
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+
+
+}
+.backup-control .date label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    margin-top: -11px;
+    border: 2px solid var(--gray-color);
+    border-radius: 50%;
+
+}
+
+.backup-control .date label::after{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--blue-color);
+    border-radius: 50%;
+    transition: 0.3s;
+    transform: scale(0);
+
+}
+
+.backup-control .date input[type="radio"]:checked + label::before{
+
+    border-color: var(--blue-alt-color);
+}
+.backup-control .date input[type="radio"]:checked + label::after{
+    transform: scale(1);
+    
+}
+
+.backup-control .servers input[type="radio"]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.backup-control .servers{
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    
+}
+
+@media (max-width: 767px){
+    .backup-control .servers{
+        flex-wrap: wrap;
+    }
+}
+
+.backup-control .servers .server{
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #eee; */
+    position: relative;
+}
+
+.backup-control .servers .server label{
+    cursor: pointer;
+}
+
+.backup-control .servers input[type="radio"]:checked + .server{
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+/* End widget-control */
+
+/* Start Profile  */
+@media (max-width: 767px){
+    .profile-page .overview{
+        flex-direction: column;
+    }
+
+}
+.profile-page .avatar-box {
+    width: 300px;
+
+}
+@media (min-width: 768px){
+    .profile-page .avatar-box {
+        border-right: 1px solid #eee;
+        
+    }
+
+}
+
+.profile-page .avatar-box .level{
+    height: 6px;
+    overflow: hidden;
+    margin: auto;
+    width: 70%;
+
+
+}
+.profile-page .overview .level span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--blue-color);
+    border-radius: 6px;
+
+}
+
+.profile-page .avatar-box > img{
+    width: 120px;
+    height: 120px;
+    
+}
+
+.profile-page .info-box .box {
+    flex-wrap: wrap;
+    border-bottom:  1px solid #eee;
+    transition: 0.3s;
+}
+
+.profile-page .info-box .box:hover{
+    background-color: #f6f6f6;
+
+}
+
+.profile-page .info-box .box > div{
+    min-width: 250px;
+    padding: 10px 0 0;
+
+}
+@media (max-width: 767px){
+    .profile-page .info-box .box > div{
+        min-width: 100px;
+    }
+
+}
+.profile-page .info-box h4{
+    font-weight: normal;
+
+}
+/* End Profile  */
 /* Start Animation */
 @keyframes chang-color{
     from{
